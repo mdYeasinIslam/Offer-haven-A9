@@ -6,6 +6,10 @@ import SignIn from "../Pages/Authentication/SignIn";
 import SignUp from "../Pages/Authentication/SignUp";
 import Brands from "../Pages/Brands/Brands";
 import About from "../Pages/About/About";
+import PrivateRoute from "./PrivateRoute";
+import MyProfile from "../Pages/My_profile/MyProfile";
+import UpdateUser from "../Pages/My_profile/UpdateUser";
+import ForgetPassword from "../Pages/Authentication/ForgetPassword";
 
 const Route = () => {
     const routes = createBrowserRouter([
@@ -23,8 +27,16 @@ const Route = () => {
                 },
                 {
                     path: '/about',
-                    element:<About/>
+                    element: <PrivateRoute><About /></PrivateRoute>
                 },
+                {
+                    path: '/myProfile',
+                    element: <PrivateRoute><MyProfile /></PrivateRoute>
+                },
+                {
+                    path: '/myProfile/updateUser',
+                    element: <PrivateRoute><UpdateUser /></PrivateRoute>
+                }
                 
             ]
         },
@@ -39,7 +51,12 @@ const Route = () => {
                 {
                     path: 'signUp',
                     element:<SignUp/>
-                }
+                },
+                 {
+                    path: '/signIn/:email',
+                    element:<ForgetPassword/>
+                },
+                
             ]
         }
     ])

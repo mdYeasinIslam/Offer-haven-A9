@@ -19,7 +19,7 @@ const Navbar = () => {
         signOutAuth()
             .then(() => {
                 toast.success('You are successfully loged out')
-                navigate('/')
+                navigate('/signIn')
             })
             .catch(er => {
                 console.error(er.message)
@@ -89,7 +89,10 @@ const Navbar = () => {
                 <ul className="menu menu-horizontal xl:px-1 lg:gap-2  xl:gap-5 font-medium text-[1rem] hidden lg:flex ">
                     {authIcon}
                 </ul>
+                <NavLink to={'/myProfile'}>
+
                 <button className="btn btn-sm "><CgProfile className="w-6 h-6" /> Profile</button>
+                </NavLink>
             </div>
         </div>
     );

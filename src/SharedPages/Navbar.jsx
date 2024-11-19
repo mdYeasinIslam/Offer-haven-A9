@@ -24,7 +24,7 @@ const Navbar = () => {
                 toast.error(er.message)
         })
     }
-
+    
     const navIcon = <>
         <li>  <NavLink className="" to={`/`}><FaHome /> Home</NavLink></li>
         <li> <NavLink to={`/brands`}><RiCoupon2Fill />Brands</NavLink></li>
@@ -89,19 +89,19 @@ const Navbar = () => {
                 <ul className="menu menu-horizontal  lg:gap-2 xl:gap-1 font-medium text-[1rem] hidden lg:flex ">
                     {authIcon}
                 </ul>
+                {
+                    userInfo?.email &&
                 <button className="btn btn-md">
                     {
                         userInfo?.photoURL &&
                         <>
                             <img src={userInfo?.photoURL} className="w-10 h-10 rounded-full" alt="" />
                         </>
-                // :
-
-                        // <CgProfile className="w-6 h-6" />
                     }
                         {userInfo?.displayName && <span>{userInfo?.displayName}</span> 
                         }
                     </button>
+                }
             </div>
         </div>
     );

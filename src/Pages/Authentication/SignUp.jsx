@@ -4,10 +4,13 @@ import { MdOutlineLogin } from "react-icons/md";
 import { NavLink, useLocation, useNavigate} from "react-router-dom";
 import { toast } from "react-toastify";
 import { AuthProvider } from "../../Context/AuthContext";
+import { IoEye, IoEyeOff } from "react-icons/io5";
 
 const SignUp = () => {
     const { createUserAuth, updateUserInfo, googleAuth } = useContext(AuthProvider)
-    const [error,setError] = useState('')
+    const [error, setError] = useState('')
+    const [eye, setEye] = useState(false)
+
     const nameRef = useRef(null)
     const emailRef = useRef(null)
     const photoRef = useRef(null)
@@ -92,7 +95,18 @@ const SignUp = () => {
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input ref={passRef} name="password" type="password" placeholder="password" className="input input-bordered" required/>
+                            <div className="w-full relative ">
+
+                                <input ref={passRef} name="password" type={`${eye ? 'text' : 'password'}`} placeholder="password" className="input input-bordered w-full" required />
+                                {
+                                    eye ?
+                                        <IoEye onClick={() => setEye(false)} className="absolute top-4 right-5" />
+                                        :
+                                        <IoEyeOff onClick={() => setEye(true)} className="absolute top-4 right-5" />
+
+                                }
+
+                            </div>
                             <label className="label">
                                 <span className="label-text text-red-700">{error}</span>
                             </label>

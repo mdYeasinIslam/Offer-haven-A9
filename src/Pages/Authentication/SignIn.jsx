@@ -4,10 +4,12 @@ import { FiLogIn } from "react-icons/fi";
 import {  NavLink, useLocation, useNavigate } from "react-router-dom";
 import { AuthProvider } from "../../Context/AuthContext";
 import { toast } from "react-toastify";
+import { IoEye, IoEyeOff } from "react-icons/io5";
 
 const SignIn = () => {
     const { signInUserAuth, googleAuth } = useContext(AuthProvider)
-    const [isrequired,setIsRequired] = useState(true)
+    const [isrequired, setIsRequired] = useState(true)
+    const [eye,setEye] = useState(false)
     const emailRef = useRef(null)
     const passRef = useRef(null)
     const navigate = useNavigate() 
@@ -39,7 +41,8 @@ const SignIn = () => {
     const passwordReset = () => {
         // console.log( emailRef.current.value)
         const email = emailRef.current.value
-        if (email) {
+        const password = passRef.current.value
+        if (email && !password) {
             console.log(email)
                return navigate(`/signIn/${email}`)
             // return <Navigate to={'/signIn/resetPassword'}/>
@@ -79,7 +82,18 @@ const SignIn = () => {
                             <label className="label">
                                 <span className="label-text">Password</span> 
                             </label>
-                            <input ref={passRef} name="password" type="password" placeholder="password" className="input input-bordered" required={isrequired} />
+                            <div className="w-full relative ">
+
+                                <input ref={passRef} name="password" type={`${eye?'text':'password'}`} placeholder="password" className="input input-bordered w-full" required={isrequired} />
+                                {
+                                    eye ?
+                                    <IoEye onClick={()=>setEye(false)} className="absolute top-4 right-5" /> 
+                                    :
+                                    <IoEyeOff onClick={()=>setEye(true)} className="absolute top-4 right-5" />
+                                   
+                                }
+
+                            </div>
                             <label className="label">
                                 {/* <NavLink to={`/signIn/resetPassword`}> <button  className="label-text-alt link link-hover">Forgot password?</button></NavLink> */}
                                

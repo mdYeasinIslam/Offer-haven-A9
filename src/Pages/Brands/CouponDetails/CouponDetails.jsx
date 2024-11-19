@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
+import CopyToClipboard from "react-copy-to-clipboard";
 import { useParams } from "react-router-dom";
+import { toast } from "react-toastify";
 // import DisplayCouponDetails from "./DisplayCouponDetails";
 
 const CouponDetails = () => {
@@ -16,6 +18,9 @@ const CouponDetails = () => {
 
             })
     }, [_id])
+    const handleCopy = () => {
+        toast.success("Coupon Code Copied!");
+    };
     console.log(brand,_id)
     return (
         <div className=" bg-gray-100 p-5">
@@ -54,11 +59,11 @@ const CouponDetails = () => {
 
                             {/* Actions */}
                             <div className="flex flex-col items-end">
-                                {/* <CopyToClipboard text={coupon.coupon_code} onCopy={handleCopy}> */}
+                                <CopyToClipboard text={coupon.coupon_code} onCopy={handleCopy}>
                                 <button className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">
                                     Copy Code
                                 </button>
-                                {/* </CopyToClipboard> */}
+                                </CopyToClipboard>
                                 <a
                                     href={brand?.shop_Link}
                                     target="_blank"

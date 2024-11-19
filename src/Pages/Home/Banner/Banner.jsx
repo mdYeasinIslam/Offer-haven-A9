@@ -43,7 +43,7 @@ const Banner = () => {
         <>
             <div ref={sliderRef} className="keen-slider">
                 <div className="relative keen-slider__slide number-slide1 w-full ">
-                    <img className="w-full h-full brightness-50" src="/public/assets/pexels1.jpg" alt="" />
+                    <img className="w-full h-full brightness-50" src="/assets/pexels1.jpg" alt="" />
                     <div className="absolute top-[25%] space-y-5 text-white  text-center px-4">
                         <header>
                         <h3 className="text-xl font-semibold">Use Coupon Code AND Save Your Money </h3>
@@ -54,7 +54,7 @@ const Banner = () => {
                 </div>
 
                 <div className="relative keen-slider__slide number-slide2">
-                    <img className="w-full h-full brightness-50" src="/public/assets/pexels2.jpg" alt="" />
+                    <img className="w-full h-full brightness-50" src="/assets/pexels2.jpg" alt="" />
                     <div className="absolute top-[25%] space-y-5 text-white w-1/2 text-center px-4">
                         <header>
                             <h1 className="text-7xl font-semibold font-family tracking-tighter brightness-90">It looks like its

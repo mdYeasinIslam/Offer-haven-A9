@@ -12,12 +12,14 @@ const Home = () => {
     </header>
     return (
         <div>
+           
             <Banner />
             <div className=" mt-16">
                 <CommonHeading header={header} />
             </div>
             <BrandLogo />
-            <BrandsOnSell/>
+            <BrandsOnSell />
+            
         </div>
     );
 };

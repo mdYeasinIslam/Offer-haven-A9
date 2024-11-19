@@ -1,5 +1,4 @@
 import { useContext } from "react";
-
 import { CgProfile } from "react-icons/cg";
 import { FaHome } from "react-icons/fa";
 import { FcAbout } from "react-icons/fc";
@@ -30,6 +29,17 @@ const Navbar = () => {
     const navIcon = <>
         <li>  <NavLink className="" to={`/`}><FaHome /> Home</NavLink></li>
         <li> <NavLink to={`/brands`}><RiCoupon2Fill />Brands</NavLink></li>
+        <li><NavLink to={'/myProfile'} >
+            {
+                userInfo?.photoURL ?
+                    <>
+                        <img src={userInfo?.photoURL} className="w-6 h-6 rounded-full" alt="" />
+                    </>
+                    :
+
+                    <CgProfile className="w-6 h-6" />
+            }
+            my-Profile</NavLink></li>
         <li> <NavLink to={`/about`}><FcAbout />
             About Us</NavLink></li>
     </>
@@ -89,21 +99,11 @@ const Navbar = () => {
                 <ul className="menu menu-horizontal  lg:gap-2 xl:gap-1 font-medium text-[1rem] hidden lg:flex ">
                     {authIcon}
                 </ul>
-               {userInfo?.email && <NavLink to={'/myProfile'}>
                     <button className="btn btn-md ">
-                        {
-                            userInfo?.photoURL ? 
-                                <>
-                                    <img src={userInfo?.photoURL} className="w-10 h-10 rounded-full" alt="" />
-                                </>
-                                :
-
-                        <CgProfile className="w-6 h-6" /> 
-                        }
+                        
                         {userInfo?.displayName && <span>{userInfo?.displayName}</span> 
                         }
                     </button>
-                </NavLink>}
             </div>
         </div>
     );

@@ -11,12 +11,14 @@ import MyProfile from "../Pages/My_profile/MyProfile";
 import UpdateUser from "../Pages/My_profile/UpdateUser";
 import ForgetPassword from "../Pages/Authentication/ForgetPassword";
 import CouponDetails from "../Pages/Brands/CouponDetails/CouponDetails";
+import ErrorPage from "../ErrorPage/ErrorPage";
 
 const Route = () => {
     const routes = createBrowserRouter([
         {
             path: "/",
             element: <Main />,
+            errorElement:<ErrorPage/>,
             children: [
                 {
                     path: '/',
@@ -28,7 +30,7 @@ const Route = () => {
                 },
                 {
                     path: '/brands/:_id',
-                    element: <CouponDetails />
+                    element: <PrivateRoute><CouponDetails /></PrivateRoute>
                 },
                 {
                     path: '/about',
@@ -48,6 +50,7 @@ const Route = () => {
         {
             path: '/',
             element: <Secondary />,
+            errorElement: <ErrorPage />,
             children: [
                 {
                     path: '/signIn',

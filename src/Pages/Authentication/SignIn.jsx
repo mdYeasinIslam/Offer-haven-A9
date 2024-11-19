@@ -10,7 +10,7 @@ const SignIn = () => {
     const [isrequired,setIsRequired] = useState(true)
     const emailRef = useRef(null)
     const passRef = useRef(null)
-    const navigate = useNavigate()
+    const navigate = useNavigate() 
     const location = useLocation()
     const from = location.state?.from?.pathname || '/'
     const formHandler = (event) => {
@@ -54,7 +54,7 @@ const SignIn = () => {
                 const user = result.user
                 console.log(user)
                 toast.success('Successfully log in by google')
-                navigate('/')
+                navigate(from, { replace: true })
             }).catch(er => {
                 console.log(er.message)
                 toast.error(er.message)

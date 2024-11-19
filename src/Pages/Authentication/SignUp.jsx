@@ -1,7 +1,7 @@
 import { useContext, useRef, useState } from "react";
 import { FaGoogle } from "react-icons/fa";
 import { MdOutlineLogin } from "react-icons/md";
-import { NavLink, useNavigate} from "react-router-dom";
+import { NavLink, useLocation, useNavigate} from "react-router-dom";
 import { toast } from "react-toastify";
 import { AuthProvider } from "../../Context/AuthContext";
 
@@ -13,7 +13,8 @@ const SignUp = () => {
     const photoRef = useRef(null)
     const passRef = useRef(null)
     const navigate = useNavigate()
-
+    const location = useLocation()
+    const from = location.state?.from?.pathname || '/'
     const formHandler = (event) => {
         event.preventDefault()
         const name = nameRef.current?.value
@@ -39,7 +40,7 @@ const SignUp = () => {
                     .catch(er => {
                         console.log(er)
                         toast.error(`${er.message}`)
-                    })
+                    }) 
                 toast.success('your account create successfully')
                 navigate('/')
             })
@@ -54,7 +55,8 @@ const SignUp = () => {
                 const user = result.user
                 console.log(user)
                 toast.success('Successfully log in by google')
-                navigate('/')
+                navigate(from, { replace: true })
+
             }).catch(er => {
                 console.log(er.message)
                 toast.error(er.message)

@@ -5,20 +5,19 @@ import { FcAbout } from "react-icons/fc";
 import { FiLogIn } from "react-icons/fi";
 import { MdOutlineLogin } from "react-icons/md";
 import { RiCoupon2Fill } from "react-icons/ri";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { AuthProvider } from "../Context/AuthContext";
 import { toast } from "react-toastify";
 
 const Navbar = () => {
     const { userInfo, signOutAuth } = useContext(AuthProvider)
-    // console.log(userInfo)
-    const navigate = useNavigate()
+   
     
     const signOut = () => {
         signOutAuth()
             .then(() => {
                 toast.success('You are successfully loged out')
-                navigate('/signIn')
+               
             })
             .catch(er => {
                 console.error(er.message)
@@ -30,16 +29,7 @@ const Navbar = () => {
         <li>  <NavLink className="" to={`/`}><FaHome /> Home</NavLink></li>
         <li> <NavLink to={`/brands`}><RiCoupon2Fill />Brands</NavLink></li>
         <li><NavLink to={'/myProfile'} >
-            {
-                userInfo?.photoURL ?
-                    <>
-                        <img src={userInfo?.photoURL} className="w-6 h-6 rounded-full" alt="" />
-                    </>
-                    :
-
-                    <CgProfile className="w-6 h-6" />
-            }
-            my-Profile</NavLink></li>
+            <CgProfile className="w-6 h-6" />my-Profile</NavLink></li>
         <li> <NavLink to={`/about`}><FcAbout />
             About Us</NavLink></li>
     </>
@@ -99,8 +89,16 @@ const Navbar = () => {
                 <ul className="menu menu-horizontal  lg:gap-2 xl:gap-1 font-medium text-[1rem] hidden lg:flex ">
                     {authIcon}
                 </ul>
-                    <button className="btn btn-md ">
-                        
+                <button className="btn btn-md">
+                    {
+                        userInfo?.photoURL &&
+                        <>
+                            <img src={userInfo?.photoURL} className="w-10 h-10 rounded-full" alt="" />
+                        </>
+                // :
+
+                        // <CgProfile className="w-6 h-6" />
+                    }
                         {userInfo?.displayName && <span>{userInfo?.displayName}</span> 
                         }
                     </button>

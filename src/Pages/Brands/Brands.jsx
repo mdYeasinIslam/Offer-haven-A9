@@ -4,14 +4,34 @@ import CommonHeading from "../CommonHeading/CommonHeading";
 
 const Brands = () => {
     const [brandLogo, setBrandLogo] = useState([])
+    const [search, setSearch] = useState("")
+    const [noFound,setNoFound] = useState('')
     useEffect(() => {
         fetch('/couponCollection.json')
             .then(res => res.json())
             .then(data => {
+                if (search.length > 0) {
+                    const filter = data.filter(f => f?.brand_name?.toLowerCase().includes(search.toLowerCase()))
+                    console.log(filter)
+                    if (!filter.length) {
+                        setNoFound('Sorry!! No data is Founded. Please search with correct brand name')
+                    }
+                    else {
+                        setNoFound('')
+                    }
+                 return  setBrandLogo(filter)
+                }
+                // else {
+                    
+                // }
                 setBrandLogo(data)
             })
-    }, [])
-
+    }, [search])
+    const handleSearch = (e) => {
+        // e.preaventDefault()
+        setSearch(e.target.value)
+        // setNoFound("")
+    }
     const header = <header className="relative">
         <img src="/assets/Colored Shapes.svg" alt="" className="w-full  h-40 md:h-full rounded-xl " />
         <div className="text-center absolute top-[25%] text-white left-[25%] space-y-5">
@@ -20,6 +40,7 @@ const Brands = () => {
             </p>
         </div>
     </header>
+
     return (
         <div>
             <div className=" container mx-auto">
@@ -27,13 +48,30 @@ const Brands = () => {
                     <CommonHeading header={header} />
                 </div>
                 <div className="mt-10">
+                    <div className="flex justify-center mb-5">
+                        <input
+                            type="text"
+                            placeholder="Search by Brand Name"
+                            // value={search}
+                            onChange={handleSearch}
+                            className="w-1/2 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        />
+                    </div>
 
                     <h1 className="text-xl font-semibold font-family ">All Brand Details :</h1>
+                    {
+                        noFound.length > 1 ?
+                            <div className="text-center text-xl font-semibold font-family my-10">
+                                {noFound}
+                            </div>
+                            :
+
                     <div className=" grid gap-5 mt-2 max-w-6xl mx-auto">
                         {brandLogo?.map(brand => <BrandDetails key={brand?._id} brand={brand} />)}
 
                         {/* {brand?.brand_name} */}
                     </div>
+                    }
                 </div>
 
             </div>

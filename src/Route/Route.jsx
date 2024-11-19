@@ -10,6 +10,7 @@ import PrivateRoute from "./PrivateRoute";
 import MyProfile from "../Pages/My_profile/MyProfile";
 import UpdateUser from "../Pages/My_profile/UpdateUser";
 import ForgetPassword from "../Pages/Authentication/ForgetPassword";
+import CouponDetails from "../Pages/Brands/CouponDetails/CouponDetails";
 
 const Route = () => {
     const routes = createBrowserRouter([
@@ -24,6 +25,10 @@ const Route = () => {
                 {
                     path: '/brands',
                     element:<Brands/>
+                },
+                {
+                    path: '/brands/:_id',
+                    element: <CouponDetails />
                 },
                 {
                     path: '/about',
@@ -51,9 +56,9 @@ const Route = () => {
                 {
                     path: 'signUp',
                     element:<SignUp/>
-                },
+                }, 
                  {
-                    path: '/signIn/:email',
+                     path: '/signIn/:email',
                     element:<ForgetPassword/>
                 },
                 

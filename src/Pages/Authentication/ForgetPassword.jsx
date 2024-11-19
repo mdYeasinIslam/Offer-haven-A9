@@ -12,7 +12,7 @@ const ForgetPassword = () => {
         passwordResetAuth(email)
             .then(() => {
                 toast('password reset email send successfully , Go to your gmail account')
-                goToGmail()
+                // goToGmail()
 
             })
             .catch(er => {
@@ -21,10 +21,10 @@ const ForgetPassword = () => {
         })
     }
 
-    const goToGmail = () => {
-        window.location.href = "https://www.youtube.com";
-        // window.open("https://www.youtube.com", "_blank");
-    }
+    // const goToGmail = () => {
+    //     window.location.href = "https://www.youtube.com";
+    //     window.open("https://www.youtube.com", "_blank");
+    // }
 
     const message = <div className="absolute top-10 lg:top-20 lg:space-y-5 text-white left-[12%] md:left-[15%] lg:left-[25%] text-center ">
         <h3 className="text-2xl md:text-5xl font-semibold tracking-tighter">Want to Reset Password !!</h3>

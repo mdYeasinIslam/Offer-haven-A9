@@ -1,7 +1,7 @@
 import { useContext, useRef, useState } from "react";
 import { FaGoogle } from "react-icons/fa";
 import { FiLogIn } from "react-icons/fi";
-import { NavLink, useLocation, useNavigate } from "react-router-dom";
+import {  NavLink, useLocation, useNavigate } from "react-router-dom";
 import { AuthProvider } from "../../Context/AuthContext";
 import { toast } from "react-toastify";
 
@@ -41,7 +41,8 @@ const SignIn = () => {
         const email = emailRef.current.value
         if (email) {
             console.log(email)
-           return navigate(`/signIn/${email}`)
+               return navigate(`/signIn/${email}`)
+            // return <Navigate to={'/signIn/resetPassword'}/>
         }
         else {
             setIsRequired(false)
@@ -76,10 +77,12 @@ const SignIn = () => {
                         </div>
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text">Password</span>
+                                <span className="label-text">Password</span> 
                             </label>
                             <input ref={passRef} name="password" type="password" placeholder="password" className="input input-bordered" required={isrequired} />
                             <label className="label">
+                                {/* <NavLink to={`/signIn/resetPassword`}> <button  className="label-text-alt link link-hover">Forgot password?</button></NavLink> */}
+                               
                                 <button  onClick={passwordReset}  className="label-text-alt link link-hover">Forgot password?</button>
                               
                             </label>

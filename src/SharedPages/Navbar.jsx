@@ -12,7 +12,7 @@ import { toast } from "react-toastify";
 
 const Navbar = () => {
     const { userInfo, signOutAuth } = useContext(AuthProvider)
-    console.log(userInfo)
+    // console.log(userInfo)
     const navigate = useNavigate()
     
     const signOut = () => {
@@ -74,25 +74,36 @@ const Navbar = () => {
                         {authIcon}
                     </ul>
                 </div>
-                <div className='flex items-center'>
+                <div className='flex  items-center'>
                     <img src="https://static.vecteezy.com/system/resources/thumbnails/008/486/033/small_2x/paper-bags-with-big-percent-promo-code-concept-earn-point-and-get-reward-from-online-shopping-3d-rendering-illustration-png.png" alt="" className='w-16 md:w-20' />
-                    <h1 className='md:text-xl font-semibold '>Coupons World</h1>
+                    <h1 className='md:text-xl font-semibold '>OfferHaven</h1>
                 </div>
             </div>
             <div className="navbar-center hidden lg:flex ">
-                <ul className="menu menu-horizontal px-1 lg:gap-3 xl:gap-5 font-medium text-[1rem] ">
+                <ul className="menu menu-horizontal   px-1 lg:gap-3 xl:gap-5 font-medium text-[1rem] ">
                     {navIcon}
                 </ul>
             </div>
-            <div className="navbar-end gap-5 font-medium list-none">
+            <div className=" navbar-end font-medium list-none">
 
-                <ul className="menu menu-horizontal xl:px-1 lg:gap-2  xl:gap-5 font-medium text-[1rem] hidden lg:flex ">
+                <ul className="menu menu-horizontal  lg:gap-2 xl:gap-1 font-medium text-[1rem] hidden lg:flex ">
                     {authIcon}
                 </ul>
-                <NavLink to={'/myProfile'}>
+               {userInfo?.email && <NavLink to={'/myProfile'}>
+                    <button className="btn btn-md ">
+                        {
+                            userInfo?.photoURL ? 
+                                <>
+                                    <img src={userInfo?.photoURL} className="w-10 h-10 rounded-full" alt="" />
+                                </>
+                                :
 
-                <button className="btn btn-sm "><CgProfile className="w-6 h-6" /> Profile</button>
-                </NavLink>
+                        <CgProfile className="w-6 h-6" /> 
+                        }
+                        {userInfo?.displayName && <span>{userInfo?.displayName}</span> 
+                        }
+                    </button>
+                </NavLink>}
             </div>
         </div>
     );

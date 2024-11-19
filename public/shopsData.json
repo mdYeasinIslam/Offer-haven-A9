@@ -1,0 +1,236 @@
+[
+    {
+        "_id": "12a13b14c",
+        "brand_name": "Shop 12",
+        "rating": 4.2,
+        "description": "Description for Shop 12",
+        "brand_logo": "https://example.com/logos/shop12.png",
+        "coupons": [
+            {
+                "coupon_code": "CODE1210",
+                "description": "Get 10% off on Shop 12 items.",
+                "expiry_date": "2024-12-31",
+                "condition": "Minimum purchase of $50 required.",
+                "coupon_type": "Percentage"
+            },
+            {
+                "coupon_code": "FREE12SHIP",
+                "description": "Free shipping on orders above $20 at Shop 12.",
+                "expiry_date": "2025-01-15",
+                "condition": "Valid for standard shipping only.",
+                "coupon_type": "Free Shipping"
+            }
+        ],
+        "shop_Link": "https://www.shop12.com",
+        "category": "General",
+        "isSaleOn": true
+    },
+    {
+        "_id": "13a14b15c",
+        "brand_name": "Shop 13",
+        "rating": 4.3,
+        "description": "Description for Shop 13",
+        "brand_logo": "https://example.com/logos/shop13.png",
+        "coupons": [
+            {
+                "coupon_code": "CODE1310",
+                "description": "Get 10% off on Shop 13 items.",
+                "expiry_date": "2024-12-31",
+                "condition": "Minimum purchase of $50 required.",
+                "coupon_type": "Percentage"
+            },
+            {
+                "coupon_code": "FREE13SHIP",
+                "description": "Free shipping on orders above $20 at Shop 13.",
+                "expiry_date": "2025-01-15",
+                "condition": "Valid for standard shipping only.",
+                "coupon_type": "Free Shipping"
+            }
+        ],
+        "shop_Link": "https://www.shop13.com",
+        "category": "General",
+        "isSaleOn": false
+    },
+    {
+        "_id": "14a15b16c",
+        "brand_name": "Shop 14",
+        "rating": 4.4,
+        "description": "Description for Shop 14",
+        "brand_logo": "https://example.com/logos/shop14.png",
+        "coupons": [
+            {
+                "coupon_code": "CODE1410",
+                "description": "Get 10% off on Shop 14 items.",
+                "expiry_date": "2024-12-31",
+                "condition": "Minimum purchase of $50 required.",
+                "coupon_type": "Percentage"
+            },
+            {
+                "coupon_code": "FREE14SHIP",
+                "description": "Free shipping on orders above $20 at Shop 14.",
+                "expiry_date": "2025-01-15",
+                "condition": "Valid for standard shipping only.",
+                "coupon_type": "Free Shipping"
+            }
+        ],
+        "shop_Link": "https://www.shop14.com",
+        "category": "General",
+        "isSaleOn": true
+    },
+    {
+        "_id": "15a16b17c",
+        "brand_name": "Shop 15",
+        "rating": 4.0,
+        "description": "Description for Shop 15",
+        "brand_logo": "https://example.com/logos/shop15.png",
+        "coupons": [
+            {
+                "coupon_code": "CODE1510",
+                "description": "Get 10% off on Shop 15 items.",
+                "expiry_date": "2024-12-31",
+                "condition": "Minimum purchase of $50 required.",
+                "coupon_type": "Percentage"
+            },
+            {
+                "coupon_code": "FREE15SHIP",
+                "description": "Free shipping on orders above $20 at Shop 15.",
+                "expiry_date": "2025-01-15",
+                "condition": "Valid for standard shipping only.",
+                "coupon_type": "Free Shipping"
+            }
+        ],
+        "shop_Link": "https://www.shop15.com",
+        "category": "General",
+        "isSaleOn": false
+    },
+    {
+        "_id": "16a17b18c",
+        "brand_name": "Shop 16",
+        "rating": 4.1,
+        "description": "Description for Shop 16",
+        "brand_logo": "https://example.com/logos/shop16.png",
+        "coupons": [
+            {
+                "coupon_code": "CODE1610",
+                "description": "Get 10% off on Shop 16 items.",
+                "expiry_date": "2024-12-31",
+                "condition": "Minimum purchase of $50 required.",
+                "coupon_type": "Percentage"
+            },
+            {
+                "coupon_code": "FREE16SHIP",
+                "description": "Free shipping on orders above $20 at Shop 16.",
+                "expiry_date": "2025-01-15",
+                "condition": "Valid for standard shipping only.",
+                "coupon_type": "Free Shipping"
+            }
+        ],
+        "shop_Link": "https://www.shop16.com",
+        "category": "General",
+        "isSaleOn": true
+    },
+    {
+        "_id": "17a18b19c",
+        "brand_name": "Shop 17",
+        "rating": 4.2,
+        "description": "Description for Shop 17",
+        "brand_logo": "https://example.com/logos/shop17.png",
+        "coupons": [
+            {
+                "coupon_code": "CODE1710",
+                "description": "Get 10% off on Shop 17 items.",
+                "expiry_date": "2024-12-31",
+                "condition": "Minimum purchase of $50 required.",
+                "coupon_type": "Percentage"
+            },
+            {
+                "coupon_code": "FREE17SHIP",
+                "description": "Free shipping on orders above $20 at Shop 17.",
+                "expiry_date": "2025-01-15",
+                "condition": "Valid for standard shipping only.",
+                "coupon_type": "Free Shipping"
+            }
+        ],
+        "shop_Link": "https://www.shop17.com",
+        "category": "General",
+        "isSaleOn": false
+    },
+    {
+        "_id": "18a19b20c",
+        "brand_name": "Shop 18",
+        "rating": 4.3,
+        "description": "Description for Shop 18",
+        "brand_logo": "https://example.com/logos/shop18.png",
+        "coupons": [
+            {
+                "coupon_code": "CODE1810",
+                "description": "Get 10% off on Shop 18 items.",
+                "expiry_date": "2024-12-31",
+                "condition": "Minimum purchase of $50 required.",
+                "coupon_type": "Percentage"
+            },
+            {
+                "coupon_code": "FREE18SHIP",
+                "description": "Free shipping on orders above $20 at Shop 18.",
+                "expiry_date": "2025-01-15",
+                "condition": "Valid for standard shipping only.",
+                "coupon_type": "Free Shipping"
+            }
+        ],
+        "shop_Link": "https://www.shop18.com",
+        "category": "General",
+        "isSaleOn": true
+    },
+    {
+        "_id": "19a20b21c",
+        "brand_name": "Shop 19",
+        "rating": 4.4,
+        "description": "Description for Shop 19",
+        "brand_logo": "https://example.com/logos/shop19.png",
+        "coupons": [
+            {
+                "coupon_code": "CODE1910",
+                "description": "Get 10% off on Shop 19 items.",
+                "expiry_date": "2024-12-31",
+                "condition": "Minimum purchase of $50 required.",
+                "coupon_type": "Percentage"
+            },
+            {
+                "coupon_code": "FREE19SHIP",
+                "description": "Free shipping on orders above $20 at Shop 19.",
+                "expiry_date": "2025-01-15",
+                "condition": "Valid for standard shipping only.",
+                "coupon_type": "Free Shipping"
+            }
+        ],
+        "shop_Link": "https://www.shop19.com",
+        "category": "General",
+        "isSaleOn": false
+    },
+    {
+        "_id": "20a21b22c",
+        "brand_name": "Shop 20",
+        "rating": 4.0,
+        "description": "Description for Shop 20",
+        "brand_logo": "https://example.com/logos/shop20.png",
+        "coupons": [
+            {
+                "coupon_code": "CODE2010",
+                "description": "Get 10% off on Shop 20 items.",
+                "expiry_date": "2024-12-31",
+                "condition": "Minimum purchase of $50 required.",
+                "coupon_type": "Percentage"
+            },
+            {
+                "coupon_code": "FREE20SHIP",
+                "description": "Free shipping on orders above $20 at Shop 20.",
+                "expiry_date": "2025-01-15",
+                "condition": "Valid for standard shipping only.",
+                "coupon_type": "Free Shipping"
+            }
+        ],
+        "shop_Link": "https://www.shop20.com",
+        "category": "General",
+        "isSaleOn": true
+    }
+]

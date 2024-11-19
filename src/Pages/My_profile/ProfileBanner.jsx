@@ -8,8 +8,8 @@ const ProfileBanner = ({message}) => {
     return (
         <div className="relative">
             <figure>
-                <img src="assets/Colored Patterns.svg"
-                    className="w-full h-40 md:h-full"
+                <img src="/assets/Colored Patterns.svg"
+                    className="w-full h-40 md:h-full rounded-xl"
                     alt="" />
             </figure>
             {

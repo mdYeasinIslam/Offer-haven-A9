@@ -33,13 +33,9 @@ const SignUp = () => {
 
         }
         createUserAuth(email, password)
-            .then((result) => {
-                const userInfo = result.user
-                console.log(userInfo)
+            .then(() => {
                 updateUserInfo(profile)
-                    .then(() => {
-
-                    })
+                    .then(() => {})
                     .catch(er => {
                         console.log(er)
                         toast.error(`${er.message}`)

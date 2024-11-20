@@ -1,7 +1,7 @@
+import { Outlet } from "react-router-dom";
 import CommonHeading from "../CommonHeading/CommonHeading";
 import Banner from "./Banner/Banner";
 import BrandLogo from "./BrandLogo/BrandLogo";
-import BrandsOnSell from "./BrandOnSell/BrandsOnSell";
 
 const Home = () => {
 
@@ -11,14 +11,14 @@ const Home = () => {
         </p>
     </header>
     return (
-        <div>
+        <div> 
            
             <Banner />
             <div className=" mt-16">
                 <CommonHeading header={header} />
             </div>
             <BrandLogo />
-            <BrandsOnSell />
+            <Outlet/>
             
         </div>
     );

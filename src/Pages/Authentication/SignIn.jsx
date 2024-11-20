@@ -19,18 +19,13 @@ const SignIn = () => {
         event.preventDefault()
         const email = emailRef.current?.value
         const password = passRef.current?.value
-        console.log({ email, password })
         if (password) {
             signInUserAuth(email, password)
-                .then((result) => {
-                    const user = result.user
-                    console.log(user)
+                .then(() => {
                     navigate(from, { replace: true })
                     toast.success('wow! your Sign-In successfull')
-                    // navigate('/')
     
                 }).catch(error => {
-                    console.error(error)
                     toast.error(error.message)
                 })
         }
@@ -39,11 +34,9 @@ const SignIn = () => {
         }
     }
     const passwordReset = () => {
-        // console.log( emailRef.current.value)
         const email = emailRef.current.value
         const password = passRef.current.value
         if (email && !password) {
-            console.log(email)
                return navigate(`/signIn/${email}`)
             // return <Navigate to={'/signIn/resetPassword'}/>
         }
@@ -53,13 +46,10 @@ const SignIn = () => {
     }
     const googleAuthUser = () => {
         googleAuth()
-            .then(result => {
-                const user = result.user
-                console.log(user)
+            .then(() => {
                 toast.success('Successfully log in by google')
                 navigate(from, { replace: true })
             }).catch(er => {
-                console.log(er.message)
                 toast.error(er.message)
         })
     }

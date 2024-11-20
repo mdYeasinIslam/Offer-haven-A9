@@ -25,12 +25,10 @@ const SignUp = () => {
         const email = emailRef.current?.value
         const password = passRef.current?.value
         const profile = { displayName: name, photoURL }
-        console.log({ name, photoURL, email, password })
 
         const regex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
         // Test the password against the regex
         if (!regex.test(password)) {
-            console.log("Password is invalid. It must have at least one uppercase letter, one lowercase letter, and be at least 6 characters long.");
             setError('Password is invalid. It must have at least one uppercase letter, one lowercase letter, and be at least 6 characters long.')
             toast.error('Password must have at least one Uppercase and lowercase letter and length more than 6')
             return false;
@@ -41,27 +39,23 @@ const SignUp = () => {
                 updateUserInfo(profile)
                     .then(() => {})
                     .catch(er => {
-                        console.log(er)
                         toast.error(`${er.message}`)
                     }) 
                 toast.success('your account create successfully')
                 navigate('/')
             })
             .catch(error => {
-                console.error(error)
+              
                 toast.error(`${error.message}`)
             })
     }
     const googleAuthUser = () => {
         googleAuth()
-            .then(result => {
-                const user = result.user
-                console.log(user)
+            .then(() => {
                 toast.success('Successfully log in by google')
                 navigate(from, { replace: true })
 
             }).catch(er => {
-                console.log(er.message)
                 toast.error(er.message)
             })
     }

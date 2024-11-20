@@ -8,7 +8,6 @@ const BrandLogo = () => {
         fetch('/shopsData.json')
             .then(res => res.json())
             .then(data => {
-                // console.log(data)
                 setBrandLogo(data)
             })
 

@@ -12,7 +12,7 @@ const Brands = () => {
             .then(data => {
                 if (search.length > 0) {
                     const filter = data.filter(f => f?.brand_name?.toLowerCase().includes(search.toLowerCase()))
-                    console.log(filter)
+             
                     if (!filter.length) {
                         setNoFound('Sorry!! No data is Founded. Please search with correct brand name')
                     }

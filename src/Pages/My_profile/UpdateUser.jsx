@@ -12,14 +12,12 @@ const UpdateUser = () => {
         const name = nameRef.current?.value
         const photoURL = photoRef.current?.value
         const profile = { displayName: name, photoURL }
-        console.log(profile)
         updateUserInfo(profile)
             .then(() => {
             setCount(count + 1)
             toast('Wow! User Info update successfully')
             })
             .catch(er => {
-                console.log(er.message)
             toast.error(er.message)
         })
     }

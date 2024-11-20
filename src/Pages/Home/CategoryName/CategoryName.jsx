@@ -1,17 +1,21 @@
 import PropTypes from 'prop-types'
-const CategoryName = ({ names }) => {
+import { NavLink, useParams } from 'react-router-dom';
+const CategoryName = ({ names, setGetCategory }) => {
+    const { _id } = useParams()
+
     
     return (
-        <section>
-            <div>
-                <button className='btn w-full'>
+        <div>
+            <NavLink onClick={()=>setGetCategory(names)} to={`/category/${names._id}`}>
+                <button className={`btn w-full ${_id == names._id && 'btn-success'}`}>
                     {names.category}
                 </button>
+            </NavLink>
           </div>
-        </section>
     );
 };
 CategoryName.propTypes = {
-    names:PropTypes.object
+    names: PropTypes.object,
+    setGetCategory:PropTypes.func
 }
 export default CategoryName;

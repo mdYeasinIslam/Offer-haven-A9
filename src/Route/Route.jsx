@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom";
 import Main from "../Layout/Main";
 import Home from "../Pages/Home/Home";
 import Secondary from "../Layout/Secondary";
@@ -12,6 +12,7 @@ import UpdateUser from "../Pages/My_profile/UpdateUser";
 import ForgetPassword from "../Pages/Authentication/ForgetPassword";
 import CouponDetails from "../Pages/Brands/CouponDetails/CouponDetails";
 import ErrorPage from "../ErrorPage/ErrorPage";
+import BrandsOnSell from "../Pages/Home/BrandOnSell/BrandsOnSell";
 
 const Route = () => {
     const routes = createBrowserRouter([
@@ -21,8 +22,18 @@ const Route = () => {
             errorElement:<ErrorPage/>,
             children: [
                 {
+                    path: '',
+                    element:<Navigate to={`/category/1`}/>
+                },
+                {
                     path: '/',
-                    element:<Home/>
+                    element: <Home />,
+                    children: [
+                        {
+                            path: '/category/:_id',
+                            element: <BrandsOnSell />
+                        }
+                    ]
                 },
                 {
                     path: '/brands',

@@ -1,7 +1,8 @@
 [
+   
     {
         "_id": "1",
-        "category": "Electronics"
+        "category": "All Category"
     },
     {
         "_id": "2",
@@ -26,6 +27,10 @@
     {
         "_id": "7",
         "category": "Eco-friendly Products"
+    },
+    {
+        "_id": "8",
+        "category": "Electronics"
     }
     
 ]

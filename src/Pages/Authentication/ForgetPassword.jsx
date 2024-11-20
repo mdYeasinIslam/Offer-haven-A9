@@ -13,11 +13,9 @@ const ForgetPassword = () => {
             .then(() => {
                 toast('password reset email send successfully , Go to your gmail account')
                 // goToGmail()
-                window.location.href ="https://mail.google.com/mail/u/0/#inbox"
-
+                // window.location.href ="https://mail.google.com/mail/u/0/#inbox"
             })
             .catch(er => {
-                console.log(er.message)
                 toast.error(er.message)
         })
     }

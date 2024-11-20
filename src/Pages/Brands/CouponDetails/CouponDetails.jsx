@@ -14,7 +14,6 @@ const CouponDetails = () => {
             .then(res => res.json())
             .then(data => {
                 const filter = data?.filter(f => f._id == _id)
-                console.log(data)
                 setBrands(filter[0])
 
             })
@@ -22,7 +21,6 @@ const CouponDetails = () => {
     const handleCopy = () => {
         toast.success("Coupon Code Copied!");
     };
-    console.log(brand,_id)
     return (
         <div className=" bg-gray-100 p-1 md:p-5">
             

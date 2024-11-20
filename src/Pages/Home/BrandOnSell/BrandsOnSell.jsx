@@ -20,13 +20,13 @@ const BrandsOnSell = () => {
         </p>
     </header>
     return (
-        <div className="my-10">
-            <div className=" mt-16">
+        <div className="my-10 ">
+            <div className=" md:mt-16">
                 <CommonHeading header={header} />
             </div>
-            <div className=" ">
-                <h1 className="text-xl font-semibold font-family ">Brand Sell On :</h1>
-                <div className=" col-span-3 grid grid-cols-3 gap-10 mt-10">
+            <div className="px-5 max-w-5xl mx-auto space-y-4 mt-5">
+                <h1 className="text-2xl font-semibold font-family ">Brand Sell On :</h1>
+                <div className=" grid md:grid-cols-2 lg:grid-cols-3 gap-10  md:mt-10">
                      {brandLogo?.map(brand => <BrandDetails key={brand?._id} brand={brand} />)}
                 </div>
                 

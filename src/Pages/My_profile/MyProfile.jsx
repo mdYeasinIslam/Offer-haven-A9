@@ -8,14 +8,14 @@ const MyProfile = () => {
     return (
         <div>
             <ProfileBanner />
-            <div className=" md:grid md:grid-cols-3 gap-5 my-10 border-2 max-w-5xl mx-auto rounded-xl">
-                <figure className="w-full">
-
+            <div className=" md:grid  md:grid-cols-2 lg:grid-cols-3 gap-5 my-10 border-2 max-w-5xl mx-5 xl:mx-auto rounded-xl ">
+                <figure className="w-full md:col-span-1">
+ 
                 <img src={userInfo?.photoURL}
-                    className=" h-full  md:col-span-1"
+                    className="w-full h-full p-5 lg:p-1 "
                     alt="" />
                 </figure>
-                <div className="font-medium md:col-span-2 mt-3 mb-2 space-y-4" >
+                <div className="font-medium p-2 md:p-0 md:col-span-1 lg:col-span-2 mt-3 mb-2 space-y-4" >
                     <h1 className="text-3xl font-semibold tracking-tight ">{userInfo?.displayName}</h1>
                     <p className="">
                         <span className="text-xl">Email: </span><br /> <span className="badge badge-ghost mt-3">{userInfo?.email}</span>

@@ -9,14 +9,7 @@ body {
 [class*=" number-slide"] {
   background: grey;
   display: flex;
-  /* filter: brightness(70%); */
-  /* align-items: center;
-  justify-content: center; */
-  /* font-size: 50px; */
-  /* color: #fff; */
-  /* font-weight: 500; */
   height: 670px;
-  /* max-height: 100vh; */
 }
 
 .number-slide1 {
@@ -75,4 +68,12 @@ body {
     rgba(64, 76, 255, 1) 0%,
     rgba(174, 63, 255, 1) 100%
   );
+}
+
+
+@media (max-width:750px){
+  [class^="number-slide"],
+[class*=" number-slide"] {
+  height: 350px;
+}
 }

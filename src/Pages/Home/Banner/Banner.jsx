@@ -41,23 +41,23 @@ const Banner = () => {
 
     return (
         <>
-            <div ref={sliderRef} className="keen-slider">
+            <div ref={sliderRef} className="keen-slider xl:rounded-xl">
                 <div className="relative keen-slider__slide number-slide1 w-full ">
-                    <img className="w-full h-full brightness-50" src="/assets/pexels1.jpg" alt="" />
+                    <img className="md:w-full md:h-full brightness-50" src="/assets/pexels1.jpg" alt="" />
                     <div className="absolute top-[25%] space-y-5 text-white  text-center px-4">
                         <header>
-                        <h3 className="text-xl font-semibold">Use Coupon Code AND Save Your Money </h3>
-                            <h1 className="text-7xl font-semibold font-family tracking-tighter brightness-90">Welcome to OfferHaven</h1>
+                        <h3 className="md:text-xl font-semibold">Use Coupon Code AND Save Your Money </h3>
+                            <h1 className="text-3xl md:text-7xl font-semibold font-family tracking-tighter brightness-90">Welcome to OfferHaven</h1>
                         </header>
-                        <p className="w-[70%] mx-auto">Save more on your favorite products! Discover the best coupons, exclusive discounts, and unbeatable deals all in one place. Start collecting your coupons now and never pay full price again!</p>
+                        <p className=" md:w-[70%] mx-auto">Save more on your favorite products! Discover the best coupons, exclusive discounts, and unbeatable deals all in one place. Start collecting your coupons now and never pay full price again!</p>
                     </div>
                 </div>
 
                 <div className="relative keen-slider__slide number-slide2">
                     <img className="w-full h-full brightness-50" src="/assets/pexels2.jpg" alt="" />
-                    <div className="absolute top-[25%] space-y-5 text-white w-1/2 text-center px-4">
+                    <div className="absolute top-[20%] md:top-[25%] space-y-5 text-white md:w-1/2 text-center px-4">
                         <header>
-                            <h1 className="text-7xl font-semibold font-family tracking-tighter brightness-90">It looks like its
+                            <h1 className="text-3xl md:text-7xl font-semibold font-family tracking-tighter brightness-90">It looks like its
                                 been furnished
                                 by discount
                                 stores.</h1>

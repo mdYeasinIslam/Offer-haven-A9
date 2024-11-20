@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import CopyToClipboard from "react-copy-to-clipboard";
+import { FaStar } from "react-icons/fa";
 import { useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 // import DisplayCouponDetails from "./DisplayCouponDetails";
@@ -23,29 +24,33 @@ const CouponDetails = () => {
     };
     console.log(brand,_id)
     return (
-        <div className=" bg-gray-100 p-5">
+        <div className=" bg-gray-100 p-1 md:p-5">
             
-            <div className=" bg-white p-5 shadow-md ">
-                <div className=" p-5 flex items-center ">
+            <div className=" bg-white p-1 md:p-5 shadow-md ">
+                <div className=" md:p-5 flex items-center ">
                     <img
                         src={brand?.brand_logo}
                         alt={`brand Logo`}
-                        className="w-20 h-20 rounded-md border-2 border-gray-200 mr-5"
+                        className="w-60 rounded-md border-2 border-gray-200  md:mr-5"
                     />
                     <div>
-                        <h1 className="text-2xl font-bold text-gray-800">{brand?.brand_name}</h1>
-                        <div className="flex items-center text-yellow-500">
-                            <span className="text-lg">★★★★☆</span>
+                        <h1 className="md:text-2xl font-bold text-gray-800 ">{brand?.brand_name}</h1>
+                        <div className="flex items-center ">
+                            <span className="text-lg flex ">{
+                                Array.from({ length: 5 }, (_, i) => i + 1).map(ele => <FaStar
+                                    key={ele}
+                                    className={`w-3 h-3 md:w-5 md:h-5 ${brand?.rating >= ele && "text-yellow-500"}`} />)
+                            }</span>
                             <span className="ml-2 font-bold">{brand?.rating}</span>
                         </div>
                     </div>
                 </div>
 
-                <div className="grid grid-cols-2 gap-3">
+                <div className="grid md:grid-cols-2 gap-3 px-1 md:px-5">
                     {brand?.coupons?.map((coupon, index) => (
                         <div
                             key={index}
-                            className="bg-white shadow-md rounded-md p-5 flex justify-between items-center border"
+                            className="bg-white shadow-md rounded-md p-5 xl:flex xl:justify-between items-center border"
                         >
                             {/* Coupon Details */}
                             <div>
@@ -58,7 +63,7 @@ const CouponDetails = () => {
                             </div>
 
                             {/* Actions */}
-                            <div className="flex flex-col items-end">
+                            <div className="flex justify-between xl:flex-col items-end">
                                 <CopyToClipboard text={coupon.coupon_code} onCopy={handleCopy}>
                                 <button className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">
                                     Copy Code

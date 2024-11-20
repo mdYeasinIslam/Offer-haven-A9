@@ -1,8 +1,16 @@
-# React + Vite
+# "OfferHaven"
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Short descroption:
+This site is build for getting all discount or coupon on each shop from where people can use the offer and save their money.
 
-Currently, two official plugins are available:
+# Tecnology:
+1. React + vite for project setup
+2. Tailwind css + Daisy UI for styling
+3. React router for routing
+4. firebase authentication
+5. react icons, react-toastify, React-awesome-carousol, React-fast marquee, react-copy-to-clipboard etc.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+# gitHub Link: https://github.com/programming-hero-web-course1/b10-a9-authentication-mdYeasinIslam
+
+# live site link : https://practice-firebase-58.web.app/

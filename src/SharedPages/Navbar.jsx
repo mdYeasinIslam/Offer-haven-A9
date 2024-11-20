@@ -45,7 +45,7 @@ const Navbar = () => {
                             Sign-Up</NavLink></li>
                     </>
                     :
-                    <button onClick={signOut} className="btn btn-sm ">Log-Out</button>
+                    <button onClick={signOut} className="btn btn-sm bg-gray-400 ">Log-Out</button>
             }
         </>
 
@@ -72,6 +72,20 @@ const Navbar = () => {
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
                         {navIcon}
                         {authIcon}
+
+                    {
+                        userInfo?.email &&
+                        <button className="btn btn-sm mt-1 xl:btn-md flex md:hidden bg-gray-300">
+                            {
+                                userInfo?.photoURL &&
+                                <>
+                                    <img src={userInfo?.photoURL} className="w-8 h-8 xl:w-10 xl:h-10 rounded-full" alt="" />
+                                </>
+                            }
+                            {userInfo?.displayName && <span>{userInfo?.displayName}</span>
+                            }
+                        </button>
+                    }
                     </ul>
                 </div>
                 <div className='flex  items-center'>
@@ -91,11 +105,11 @@ const Navbar = () => {
                 </ul>
                 {
                     userInfo?.email &&
-                <button className="btn btn-md">
+                <button className="btn btn-sm xl:btn-md hidden md:flex">
                     {
                         userInfo?.photoURL &&
                         <>
-                            <img src={userInfo?.photoURL} className="w-10 h-10 rounded-full" alt="" />
+                            <img src={userInfo?.photoURL} className="w-8 h-8 xl:w-10 xl:h-10 rounded-full" alt="" />
                         </>
                     }
                         {userInfo?.displayName && <span>{userInfo?.displayName}</span> 

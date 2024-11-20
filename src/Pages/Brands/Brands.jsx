@@ -22,20 +22,18 @@ const Brands = () => {
                  return  setBrandLogo(filter)
                 }
                 // else {
-                    
+                     
                 // }
                 setBrandLogo(data)
             })
     }, [search])
     const handleSearch = (e) => {
-        // e.preaventDefault()
         setSearch(e.target.value)
-        // setNoFound("")
     }
     const header = <header className="relative">
-        <img src="/assets/Colored Shapes.svg" alt="" className="w-full  h-40 md:h-full rounded-xl " />
-        <div className="text-center absolute top-[25%] text-white left-[25%] space-y-5">
-            <h1 className="text-5xl font-semibold">Choose your Favorite Brand</h1>
+        <img src="/assets/Colored Shapes.svg" alt="" className="w-full  h-40 md:h-full xl:rounded-xl " />
+        <div className="text-center absolute top-[30%] xl:top-[25%] text-white left-[10%] lg:left-[20%] xl:left-[25%] space-y-2 md:space-y-5">
+            <h1 className="text-2xl md:text-5xl font-semibold">Choose your Favorite Brand</h1>
             <p className="text-gray-300">Search your favourite store & get many deals
             </p>
         </div>
@@ -48,7 +46,8 @@ const Brands = () => {
                     <CommonHeading header={header} />
                 </div>
                 <div className="mt-10">
-                    <div className="flex justify-center mb-5">
+                    {/* serarch section */}
+                    <section className="flex justify-center mb-5">
                         <input
                             type="text"
                             placeholder="Search by Brand Name"
@@ -56,7 +55,8 @@ const Brands = () => {
                             onChange={handleSearch}
                             className="w-1/2 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                         />
-                    </div>
+                    </section>
+                    <article className="mx-5 max-w-4xl xl:max-w-7xl  lg:mx-auto">
 
                     <h1 className="text-xl font-semibold font-family ">All Brand Details :</h1>
                     {
@@ -65,13 +65,12 @@ const Brands = () => {
                                 {noFound}
                             </div>
                             :
-
-                    <div className=" grid gap-5 mt-2 max-w-6xl mx-auto">
+                    <div className=" md:grid gap-5 mt-2 ">
                         {brandLogo?.map(brand => <BrandDetails key={brand?._id} brand={brand} />)}
-
                         {/* {brand?.brand_name} */}
                     </div>
                     }
+                    </article>
                 </div>
 
             </div>

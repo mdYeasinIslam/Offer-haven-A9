@@ -6,7 +6,7 @@ const BrandDetails = ({ brand }) => {
     const { _id, brand_name, rating, description, brand_logo, isSaleOn } = brand
     return (
        
-        <div className="relative flex items-center bg-white rounded-lg shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-lg text-left p-5 mb-6 border font-family">
+        <div className="relative flex flex-col md:flex-row md:items-center bg-white rounded-lg shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-lg text-left p-5 mb-6 border font-family space-y-4 md:space-y-0 ">
             <div className="flex-shrink-0 w-1/4 flex items-center">
                 <img
                     src={brand_logo}
@@ -29,18 +29,19 @@ const BrandDetails = ({ brand }) => {
             </div>
 
             {/* Middle Section: Description */}
-            <div className="w-1/2 px-4">
-                <p className="text-gray-600">{description}</p>
+            <div className="md:w-full lg:w-1/2 ml-10 px-4">
+                <p className="text-gray-600 ">{description}</p>
             </div>
 
             {/* Right Section: Button and Bouncing Text */}
-            <div className="flex-shrink-0 w-1/4 text-right">
+            <div className="flex md:flex-col justify-between flex-shrink-0 md:w-1/4 text-right">
                 <NavLink to={`/brands/${_id}`}>
                     <button
                     className="bg-blue-800 text-white font-medium py-2 px-4 rounded-md transition duration-300 hover:bg-blue-900"
                 >
                     View Coupons
-                </button></NavLink>
+                    </button>
+                </NavLink>
                
                 {isSaleOn && (
                     <div className="text-red-500 text-sm font-bold animate-bounce mt-2">

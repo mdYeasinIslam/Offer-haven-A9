@@ -5,7 +5,7 @@ import Marquee from "react-fast-marquee";
 const BrandLogo = () => {
     const [brandLogo, setBrandLogo] = useState([])
     useEffect(() => {
-        fetch('/couponCollection.json')
+        fetch('/shopsData.json')
             .then(res => res.json())
             .then(data => {
                 // console.log(data)

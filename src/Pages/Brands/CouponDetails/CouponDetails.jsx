@@ -10,7 +10,7 @@ const CouponDetails = () => {
     const [brand, setBrands] = useState([])
 
     useEffect(() => {
-        fetch('/couponCollection.json')
+        fetch('/shopsData.json')
             .then(res => res.json())
             .then(data => {
                 const filter = data?.filter(f => f._id == _id)

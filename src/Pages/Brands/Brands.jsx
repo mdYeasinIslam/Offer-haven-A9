@@ -7,7 +7,7 @@ const Brands = () => {
     const [search, setSearch] = useState("")
     const [noFound,setNoFound] = useState('')
     useEffect(() => {
-        fetch('/couponCollection.json')
+        fetch('/shopsData.json')
             .then(res => res.json())
             .then(data => {
                 if (search.length > 0) {

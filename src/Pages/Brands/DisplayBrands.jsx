@@ -33,7 +33,6 @@ const BrandDetails = ({ brand }) => {
                 <p className="text-gray-600 ">{description}</p>
             </div>
 
-            {/* Right Section: Button and Bouncing Text */}
             <div className="flex md:flex-col justify-between flex-shrink-0 md:w-1/4 text-right">
                 <NavLink to={`/brands/${_id}`}>
                     <button
@@ -44,7 +43,7 @@ const BrandDetails = ({ brand }) => {
                 </NavLink>
                
                 {isSaleOn && (
-                    <div className="text-red-500 text-sm font-bold animate-bounce mt-2">
+                    <div className="text-red-500 text-sm font-bold animate__animated animate__pulse animate__infinite  mt-2">
                         Sale is On!
                     </div>
                 )}

@@ -19,7 +19,6 @@ const BrandsOnSell = () => {
                 }
                else if (getCategory?.category) {
                     const filterByCategory = filterData?.filter(f => f.category == getCategory.category)
-                    console.log(filterByCategory)
                     if (filterByCategory?.length) {
                         setNoFound('')
                         return setBrandLogo(filterByCategory)
@@ -41,7 +40,6 @@ const BrandsOnSell = () => {
             })
     }, [getCategory])
 
-    console.log(getCategory)
     const header = <header className="text-center">
         <h1 className="text-4xl font-semibold">Latest Coupon Codes & Deals</h1>
         <p className="text-gray-600">Search your favourite store & get many deals

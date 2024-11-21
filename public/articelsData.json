@@ -1,0 +1,23 @@
+[
+    {
+    "id": 1,
+    "title": "10 Simple Ways to Save Money on Everyday Shopping",
+    "description": "Discover practical tips to cut costs and shop smarter without compromising on quality.",
+    "image": "https://i.ibb.co.com/pbpvLyL/artcle1.webp",
+    "link": "#"
+    },
+    {
+    "id": 2,
+    "title": "Top 5 Deals You Can’t Miss This Month",
+    "description": "Stay updated with the latest discounts and offers from your favorite brands.",
+    "image": "https://i.ibb.co.com/nr73xYW/article2.webp",
+    "link": "#"
+    },
+    {
+    "id": 3,
+    "title": "Limited-Time Offers from Your Favorite Brands",
+    "description": "Check out the hottest promotions happening right now and save big!",
+    "image": "https://img.freepik.com/premium-vector/limited-offer-labels-alarm-clock-countdown-logo-limited-time-offer-badge-vector-illustration_100456-10332.jpg?semt=ais_hybrid",
+    "link": "#"
+    }
+]

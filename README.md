@@ -8,7 +8,8 @@ This site is build for getting all discount or coupon on each shop from where pe
 2. Tailwind css + Daisy UI for styling
 3. React router for routing
 4. firebase authentication
-5. react icons, react-toastify, React-awesome-carousol, React-fast marquee, react-copy-to-clipboard etc.
+5. Animate.style for animation
+6. react icons, react-toastify, React-awesome-carousol, React-fast marquee, react-copy-to-clipboard ,  etc.
 
 
 # gitHub Link: https://github.com/programming-hero-web-course1/b10-a9-authentication-mdYeasinIslam

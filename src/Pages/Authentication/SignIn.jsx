@@ -42,7 +42,7 @@ const SignIn = () => {
         }
         else {
             setIsRequired(false)
-        }
+        } 
     }
     const googleAuthUser = () => {
         googleAuth()

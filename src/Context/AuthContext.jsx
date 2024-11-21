@@ -32,7 +32,7 @@ const AuthContext = ({children}) => {
     const googleAuth = () => {
         setLoading(true)
         return signInWithPopup(auth,googleProvider)
-    }
+    } 
 
     const updateUserInfo = (profile) => {
         return updateProfile(auth.currentUser,profile)

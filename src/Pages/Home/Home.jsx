@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import CommonHeading from "../CommonHeading/CommonHeading";
 import Banner from "./Banner/Banner";
 import BrandLogo from "./BrandLogo/BrandLogo";
+import ArticleSection from "./ArticleSect/ArticleSection";
 
 const Home = () => {
 
@@ -19,7 +20,7 @@ const Home = () => {
             </div>
             <BrandLogo />
             <Outlet/>
-            
+            <ArticleSection/>
         </div>
     );
 };

@@ -32,7 +32,7 @@ const Brands = () => {
     }
     const header = <header className="relative">
         <img src="/assets/Colored Shapes.svg" alt="" className="w-full  h-40 md:h-full xl:rounded-xl " />
-        <div className="text-center absolute top-[30%] xl:top-[25%] text-white left-[10%] lg:left-[20%] xl:left-[25%] space-y-2 md:space-y-5">
+        <div className="text-center absolute top-[20%] md:top-[30%] xl:top-[25%] text-white left-[10%] lg:left-[20%] xl:left-[25%] space-y-2 md:space-y-5">
             <h1 className="text-2xl md:text-5xl font-semibold">Choose your Favorite Brand</h1>
             <p className="text-gray-300">Search your favourite store & get many deals
             </p>
@@ -57,7 +57,7 @@ const Brands = () => {
                         />
                     </section>
                     <article className="mx-5 max-w-4xl xl:max-w-7xl  lg:mx-auto">
-
+                      
                     <h1 className="text-xl font-semibold font-family ">All Brand Details :</h1>
                     {
                         noFound.length > 1 ?

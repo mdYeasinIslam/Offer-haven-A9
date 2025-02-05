@@ -12,6 +12,12 @@ This site is build for getting all discount or coupon on each shop from where pe
 6. react icons, react-toastify, React-awesome-carousol, React-fast marquee, react-copy-to-clipboard ,  etc.
 
 
-# gitHub Link: https://github.com/programming-hero-web-course1/b10-a9-authentication-mdYeasinIslam
-
-# live site link : https://practice-firebase-58.web.app/
+# live site link : https://practice-firebase-58.web.app
+ 
+# environment variable
+VITE_apiKey: AIzaSyDpxhYhdE_8pFKNDPR2rUDbNEwWiumaH1g
+VITE_authDomain: practice-firebase-58.firebaseapp.com
+VITE_projectId: practice-firebase-58
+VITE_storageBucket: practice-firebase-58.firebasestorage.app
+VITE_messagingSenderId: 274862279741
+VITE_appId: 1:274862279741:web:86453483209a22d6e4ee54

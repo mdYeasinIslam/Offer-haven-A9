@@ -1,4 +1,6 @@
 # "OfferHaven"
+![OfferHaven](https://i.ibb.co.com/S4fy2Z3v/offer-haven.png)
+
 
 # Short descroption:
 This site is build for getting all discount or coupon on each shop from where people can use the offer and save their money.

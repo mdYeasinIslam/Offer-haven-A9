@@ -1,6 +1,6 @@
 # "OfferHaven"
 <p align="center">
-  <img src="https://i.ibb.co.com/S4fy2Z3v/offer-haven.png" alt="My Portfolio"/>
+  <img src="https://i.ibb.co.com/7dVDNQP4/offer-haven.png" alt="Offer Haven"/>
 </p>
 
 # Short descroption:
